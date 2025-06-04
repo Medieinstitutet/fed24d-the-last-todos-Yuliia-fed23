@@ -8,7 +8,7 @@ export const TodoItem: React.FC<{
   <li className="bg-white rounded-xl shadow p-4 mb-3 flex justify-between items-center hover:bg-green-50 transition">
     <div>
       <h3 className="text-lg font-semibold">{todo.title}</h3>
-      <p className="text-sm text-gray-600">{todo.description}</p>
+      <p className="text-lg text-gray-600">{todo.description}</p>
     </div>
     <button
       onClick={() => onComplete(todo.id)}

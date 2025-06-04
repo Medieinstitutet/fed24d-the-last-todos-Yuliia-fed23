@@ -1,28 +1,21 @@
 import "./App.css";
 import React from "react";
-import { TodoItem } from "./components/TodoItem";
-
-
+import { TodoList } from "./components/TodoList";
+import { useLocalStorageTodos } from "../hooks/useLocalStorageTodos";
 
 const App: React.FC = () => {
-
-
-  // Example todo object
-  const todo = {
-    id: 1,
-    title: "Sample Todo",
-    description: "This is a sample todo item.",
-    done: false
-  };
-
-  // Example onComplete handler
-  const handleComplete = (id: number) => {
-    // handle completion logic here
-    console.log(`Todo with id ${id} completed`);
-  };
+  const { todos, completeTodo } = useLocalStorageTodos();
 
   return (
-     <TodoItem todo={todo} onComplete={handleComplete} />
+    <div className="min-h-screen bg-gray-100 text-black p-8">
+      <div className="max-w-xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6 text-center">Todo List</h1>
+        <TodoList todos={todos} onComplete={completeTodo} />
+        {todos.length === 0 && (
+          <p className="text-center text-black mt-6">All tasks completed!</p>
+        )}
+      </div>
+    </div>
   );
 };
 
