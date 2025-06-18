@@ -50,7 +50,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för både G och VG. Hanteringen av todos inkluderar lokal lagring och sortering, och den tillåter användare att markera uppgifter som klara och skapa nya uppgifter. Användandet av TailwindCSS är korrekt implementerat för styling, och komponenterna är korrekt uppdelade med state lifting för delade tillstånd.
+📌 **Motivering:** Koden uppfyller alla krav för både G och VG betygsnivåer. Funktionen för att lägga till, ta bort och markera todo-poster är implementerad, likaså möjligheten att sortera och visa/dölja fullständiga uppgifter. Ett formulär för att skapa nya todos finns, och de lagras i localStorage. Vidare används 'lifting state up' för effektiv komponentdelning och Tailwind CSS för styling.
 
 💡 **Förbättringsförslag:**  
-Det enda lilla förbättringen kan vara att inkludera felhantering för JSON.parse, ifall lokal lagring innehåller korrupt data. Detta kan förhindra att applikationen kraschar i oväntade situationer. Dessutom kan det vara trevligt att implementera en visuell feedback eller animation när uppgifter markeras eller avmarkeras för att förbättra användarupplevelsen.
+1. Se till att stavningen av importen 'todoInrerface' är korrekt i alla filer (borde vara 'todoInterface') för att undvika möjliga importproblem. 2. Förbättra tillgängligheten genom att lägga till aria-labels på knappar och andra interaktiva element. 3. Säkerställ att alla texter i UI (till exempel 'Add Todo', 'Sort by Status') stöder internationelliseringsmöjligheter för framtida expansion av appen.
